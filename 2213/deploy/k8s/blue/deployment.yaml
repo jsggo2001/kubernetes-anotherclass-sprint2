@@ -58,7 +58,7 @@ spec:
               path: "/liveness"
               port: 8080
             periodSeconds: 10
-            failureThreshold: 3
+            failureThreshold: 30
           resources:
             requests:
               memory: "100Mi"
