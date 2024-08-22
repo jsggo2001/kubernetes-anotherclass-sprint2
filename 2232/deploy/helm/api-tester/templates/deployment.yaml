@@ -48,15 +48,19 @@ spec:
               path: "/startup"
               port: 8080
             periodSeconds: 5
-            failureThreshold: 24
+            failureThreshold: 120
           livenessProbe:
             httpGet:
               path: "/liveness"
               port: 8080
+            periodSeconds: 10
+            failureThreshold: 60
           readinessProbe:
             httpGet:
               path: "/readiness"
               port: 8080
+            periodSeconds: 10
+            failureThreshold: 60
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.volumeMounts }}
