@@ -18,7 +18,7 @@ pipeline {
 
         APP_VERSION = '1.1.1'
         BUILD_DATE = sh(script: "echo `date +%y%m%d.%d%H%M`", returnStdout: true).trim()
-        TAG = '1.0.0'
+        TAG = "${APP_VERSION}-" + "${BUILD_DATE}"
 
         // 실습 넘버링
         CLASS_NUM = '2232'
