@@ -4,7 +4,7 @@ replicaCount: 1
 image:
   repository: jsggo2001/api-tester
   pullPolicy: Always
-  tag: v1.0.0
+  tag: 1.0.0
 
 resources:
   limits:
